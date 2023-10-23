@@ -11,23 +11,8 @@
             <input id="input-delete" type="text" placeholder="type delete">
             <button id="btn-disabled" disabled>Delete</button>
         </div>
-    <script>
-
-        document.getElementById('input-delete').addEventListener('keyup', function(event){
-            const text = event.target.value; 
-            const deleteButton = document.getElementById('btn-disabled');
-            if(text === 'delete'){
-                deleteButton.removeAttribute('disabled');
-            }
-            else{
-                deleteButton.setAttribute('disabled', true);
-            }
-            text.value = '';
-        })
-        document.getElementById('btn-disabled').addEventListener('click', function(){
-            const secret = document.getElementById('secret-info');
-            secret.style.display = 'none';
-        })
+    <script src="JS/github.js">
+       
     </script>
 </body>
 </html>
