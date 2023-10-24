@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+</head>
+
+<body>
+    <h1>Explore Event Bubble</h1>
+    <section id="list-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsam beatae alias quod
+                voluptatibus, aspernatur ratione ducimus at magni cupiditate!</li>
+            <li id="item-2">Nostrum quis ex adipisci nobis vero. Veniam, suscipit! Tenetur, ab ex. Nihil, inventore
+                dolore voluptate illum libero voluptates at quibusdam.</li>
+            <li id="item-3">Ducimus iure, adipisci quos quas corporis asperiores maiores ut nam earum numquam, provident
+                id consequuntur sit minus fugit cupiditate modi.</li>
+            <li id="item-4">Voluptatibus error repellendus maxime unde quaerat aliquid, inventore ipsa recusandae
+                dignissimos facilis dolorem harum soluta. Cupiditate omnis ipsam tempora nulla!</li>
+            <li id="item-5">Repudiandae fuga recusandae eum voluptas enim nostrum qui, nemo eligendi quae hic, quibusdam
+                vel ab labore, modi molestias quidem nulla?</li>
+            <li id="item-6">Corporis, esse! Sed est nam quas molestiae voluptatum labore, alias nihil, voluptas
+                voluptatem, quae amet suscipit! Maiores, repellendus expedita. Qui?</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('item two Clicked');
+            event.stopPropagation();
+        });
+        document.getElementById('list-ul').addEventListener('click', function(event){
+            console.log('UL Clicked');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('list-container').addEventListener('click', function(){
+            console.log('List Clicked');
+        })
+    </script>
+</body>
+
+</html>
